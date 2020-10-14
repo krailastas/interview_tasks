@@ -6,6 +6,7 @@ Install Docker and Docker Compose for your OS. The example of Docker installatio
 $ docker-compose build
 $ docker-compose up -d
 ```
+http://0.0.0.0:8000/graphql
 
 ## RUN local server
 
