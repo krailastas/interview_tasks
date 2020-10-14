@@ -1,0 +1,16 @@
+version: "3"
+services:
+  redis:
+    image: "redis"
+  api:
+      env_file: .env
+      command: python manage.py runserver 0.0.0.0:8000
+      build:
+        dockerfile: Dockerfile_Dev
+        context: .
+      ports:
+        - "8000:8000"
+      links:
+        - redis
+      volumes:
+        - .:/app
